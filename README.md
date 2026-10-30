@@ -29,7 +29,7 @@ A small machine-learning web app built with Python, Streamlit, and scikit-learn.
 - Interactive predictions
 - Unit tests and setup instructions
 
-*Project repository coming next as I continue building out this portfolio.*
+[View the Smart Data Analyzer project](./smart-data-analyzer/README.md) — source code, tests, dependencies, and setup instructions are included in this repository.
 
 ## 📫 Connect
 
