@@ -1,13 +1,13 @@
  Hi, I'm Ahmed Khouya 
 
-💻 IT student | Aspiring AI & Software Engineer**
+IT student | Aspiring AI & Software Engineer
 
 I'm interested in building practical software, understanding how systems work, and exploring how artificial intelligence can solve real-world problems. I use my GitHub to document what I'm learning and turn concepts into projects.
 
- About me
+- About me
 
--  Studying Applied Electronics, Telecommunications and Information Technology at Politehnica University of Bucharest**.
--  Exploring AI, machine learning, software development, and data-driven applications**.
+-  Studying Applied Electronics, Telecommunications and Information Technology at Politehnica University of Bucharest.
+-  Exploring AI, machine learning, software development, and data-driven applications.
 -  Building projects step by step, with an emphasis on readable code, documentation, and testing.
 -  Currently strengthening my programming fundamentals and developing a portfolio of practical projects.
 -  Open to learning from other developers and collaborating on beginner-friendly projects.
@@ -22,7 +22,7 @@ Technologies
 
  Featured projects
 
- Smart Data Analyzer
+- Smart Data Analyzer
 A small machine-learning web app built with Python, Streamlit, and scikit-learn. It uses a built-in sample dataset to demonstrate a complete classification workflow.
 
 - Data exploration and model training
