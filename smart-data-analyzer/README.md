@@ -2,6 +2,20 @@
 
 A machine-learning dashboard that explores scikit-learn's Wine dataset and evaluates a Random Forest classifier.
 
+## Screenshots
+
+### Dashboard
+
+![Smart Data Analyzer dashboard](screenshots/dashboard.png)
+
+### Model Evaluation
+
+![Confusion matrix and model evaluation](screenshots/model-evaluation.png)
+
+### Feature Importance
+
+![Random Forest feature importance chart](screenshots/feature-importance.png)
+
 ## Features
 
 - Preview the dataset and view class distribution
@@ -20,6 +34,10 @@ Python, pandas, scikit-learn, Streamlit, pytest
 
 ```text
 smart-data-analyzer/
+├── screenshots/
+│   ├── dashboard.png
+│   ├── model-evaluation.png
+│   └── feature-importance.png
 ├── src/
 │   ├── __init__.py
 │   ├── app.py
