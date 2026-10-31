@@ -14,8 +14,8 @@ I'm interested in building practical software, understanding how systems work, a
 
 Technologies
 
--Languages & web:** Java · JavaScript · HTML · CSS  
--Currently exploring:** Python · machine learning · data analysis  
+-Languages & web: Java · JavaScript · HTML · CSS  
+-Currently exploring: Python · machine learning · data analysis  
 -Tools: Git · GitHub · VS Code
 
 > This list reflects technologies I've studied or am actively exploring; I'll update it as I build more projects.
@@ -37,4 +37,4 @@ A small machine-learning web app built with Python, Streamlit, and scikit-learn.
 
 ---
 
- Thanks for visiting. I'm documenting my progress as I grow into a stronger software and AI engineer.
+ Thanks for visiting. I'm documenting my progress as I grow.
