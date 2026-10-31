@@ -14,6 +14,11 @@ def test_training_returns_valid_accuracy():
     result = train_and_evaluate(n_estimators=20, test_size=0.25)
     assert 0.0 <= result["accuracy"] <= 1.0
     assert len(result["predictions"]) == len(result["y_test"])
+    assert len(result["confusion_matrix"]) == len(result["target_names"])
+    assert all(
+        len(row) == len(result["target_names"])
+        for row in result["confusion_matrix"]
+    )
 
 
 def test_invalid_tree_count_is_rejected():
