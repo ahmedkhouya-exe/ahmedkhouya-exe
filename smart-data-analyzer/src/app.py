@@ -1,4 +1,5 @@
-"""Streamlit interface for the Smart Data Analyzer demo."""
+"""Streamlit interface for the Smart Data Analyzer."""
+
 import pandas as pd
 import streamlit as st
 from sklearn.datasets import load_wine
@@ -8,10 +9,9 @@ from model import train_and_evaluate
 st.set_page_config(page_title="Smart Data Analyzer", page_icon="📊", layout="wide")
 st.title("📊 Smart Data Analyzer")
 st.write(
-    "Explore a built-in dataset and see how a machine-learning classifier "
-    "performs on held-out data."
+    "Explore the Wine dataset, train a Random Forest classifier, "
+    "and review its evaluation results."
 )
-st.info("Educational demo only — not intended for high-stakes decisions.")
 
 with st.sidebar:
     st.header("Model settings")
@@ -28,7 +28,7 @@ left, right = st.columns(2)
 
 with left:
     st.subheader("Dataset preview")
-    st.dataframe(df.head(10), use_container_width=True)
+    st.dataframe(df.head(10), width="stretch")
 
 with right:
     st.subheader("Class distribution")
@@ -42,6 +42,15 @@ if st.button("Train and evaluate model", type="primary"):
         )
 
     st.subheader("Evaluation on held-out test data")
+
+    confusion_df = pd.DataFrame(
+        result["confusion_matrix"],
+        index=[f"Actual {name}" for name in result["target_names"]],
+        columns=[f"Predicted {name}" for name in result["target_names"]],
+    )
+    st.subheader("Confusion Matrix")
+    st.dataframe(confusion_df, width="stretch")
+
     metric_col, details_col = st.columns([1, 2])
 
     with metric_col:
@@ -49,7 +58,7 @@ if st.button("Train and evaluate model", type="primary"):
 
     with details_col:
         report = pd.DataFrame(result["report"]).T
-        st.dataframe(report.round(3), use_container_width=True)
+        st.dataframe(report.round(3), width="stretch")
 
     st.subheader("Top feature importances")
     importance = (
