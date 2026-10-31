@@ -1,28 +1,20 @@
 # Smart Data Analyzer
 
-A machine-learning web application that explores scikit-learn's built-in Wine dataset and evaluates a Random Forest classifier through an interactive Streamlit dashboard.
-
-Built with Python, pandas, scikit-learn, Streamlit, and pytest.
-
-> **Note:** This project is for educational purposes only. It is not intended for real-world decisions.
+A machine-learning dashboard that explores scikit-learn's Wine dataset and evaluates a Random Forest classifier.
 
 ## Features
 
-- **Dataset exploration** — preview samples and explore class distributions.
-- **Machine learning** — train a Random Forest classifier on the Wine dataset.
-- **Configurable training** — adjust the number of trees and the train/test split.
-- **Model evaluation** — view accuracy and a detailed classification report.
-- **Confusion matrix** — compare actual and predicted classes.
-- **Feature importance** — visualize which input features contribute most to the model.
-- **Automated tests** — verify core data-loading and model-evaluation functionality.
+- Preview the dataset and view class distribution
+- Train a Random Forest classifier
+- Adjust the number of trees and test-set size
+- View accuracy, precision, recall, and F1-score
+- Compare actual and predicted classes with a confusion matrix
+- Explore feature importance
+- Run automated tests with pytest
 
 ## Tech Stack
 
-- Python
-- pandas
-- scikit-learn
-- Streamlit
-- pytest
+Python, pandas, scikit-learn, Streamlit, pytest
 
 ## Project Structure
 
@@ -41,7 +33,7 @@ smart-data-analyzer/
 
 ## Getting Started
 
-### Prerequisites
+### Requirements
 
 - Python 3.9 or newer
 - pip
@@ -53,20 +45,15 @@ git clone https://github.com/ahmedkhouya-exe/ahmedkhouya-exe.git
 cd ahmedkhouya-exe/smart-data-analyzer
 ```
 
-### 2. Create a virtual environment
+### 2. Create and activate a virtual environment
 
 ```bash
 python -m venv .venv
-```
-
-Activate it:
-
-**macOS / Linux**
-```bash
 source .venv/bin/activate
 ```
 
-**Windows**
+On Windows, activate it with:
+
 ```bash
 .venv\\Scripts\\activate
 ```
@@ -77,17 +64,13 @@ source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
-### 4. Launch the application
+### 4. Run the app
 
 ```bash
 streamlit run src/app.py
 ```
 
-Streamlit will provide a local URL where you can open the dashboard in your browser.
-
-## Run Tests
-
-With the virtual environment activated, run:
+### 5. Run tests
 
 ```bash
 python -m pytest tests -v
@@ -95,24 +78,8 @@ python -m pytest tests -v
 
 ## Model Evaluation
 
-The application evaluates the classifier on a held-out test set and displays:
-
-- Accuracy
-- Precision, recall, and F1-score
-- A confusion matrix
-- Feature importance
-
-Results depend on the selected train/test split and model configuration. A high score on this small dataset does not guarantee performance on new, real-world data.
-
-## Limitations
-
-- Uses scikit-learn's built-in Wine dataset rather than a large, real-world dataset.
-- Results can vary depending on the train/test split and model settings.
-- Feature importance indicates the model's relative use of features; it does not establish causation.
-- Further validation would be required before applying this approach to real-world problems.
+The dashboard displays accuracy, a classification report, a confusion matrix, and the model's top feature importances. Results can change with the selected test-set size and model settings.
 
 ## Author
 
-**Ahmed Khouya**
-
-GitHub: [@ahmedkhouya-exe](https://github.com/ahmedkhouya-exe)
+**Ahmed Khouya** · [GitHub profile](https://github.com/ahmedkhouya-exe)
