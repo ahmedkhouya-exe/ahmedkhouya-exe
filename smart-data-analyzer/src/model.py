@@ -1,7 +1,8 @@
-"""Training utilities for the Smart Data Analyzer demo."""
+"""Model training and evaluation utilities for the Wine dataset."""
+
 from sklearn.datasets import load_wine
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 from sklearn.model_selection import train_test_split
 
 
@@ -21,7 +22,7 @@ def train_and_evaluate(
     test_size: float = 0.25,
     random_state: int = 42,
 ):
-    """Train a classifier and return evaluation outputs on held-out data."""
+    """Train a classifier and return its evaluation results."""
     if n_estimators < 1:
         raise ValueError("n_estimators must be at least 1")
     if not 0.1 <= test_size <= 0.5:
@@ -53,6 +54,7 @@ def train_and_evaluate(
             output_dict=True,
             zero_division=0,
         ),
+        "confusion_matrix": confusion_matrix(y_test, predictions).tolist(),
         "feature_names": feature_names,
         "target_names": target_names,
         "X_test": X_test,
