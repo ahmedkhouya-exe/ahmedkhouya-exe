@@ -31,6 +31,17 @@ A small machine-learning web app built with Python, Streamlit, and scikit-learn.
 
 [View the Smart Data Analyzer project](./smart-data-analyzer/README.md) — source code, tests, dependencies, and setup instructions are included in this repository.
 
+
+
+### AI Resume & Job Matcher
+An NLP-powered Streamlit application that compares resume text with job descriptions, estimates TF-IDF similarity, and highlights detected skill gaps.
+
+- Resume upload support: TXT, PDF, and DOCX
+- Explainable text-similarity and skill-coverage score
+- Automated tests with pytest and GitHub Actions
+
+[View the AI Resume & Job Matcher](https://github.com/ahmedkhouya-exe/ai-resume-job-matcher)
+
  Connect
 
 - GitHub: [@ahmedkhouya-exe](https://github.com/ahmedkhouya-exe)
